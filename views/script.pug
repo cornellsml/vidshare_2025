@@ -1,0 +1,30 @@
+extends ui_layout
+
+block content
+  .two.wide.column(style="text-align: right; padding: 0;")
+    button.circular.ui.icon.button.blue.big.centered.left.hidden(data-tooltip='Previous Video', style="margin: 0;")
+      i.chevron.left.icon
+  .twelve.wide.column
+    each val, index in script
+      include ./partials/actorPost
+  .two.wide.column(style="text-align: left; padding: 0; height: 100%; display: flex; align-items: center;")
+    //- div is needed because a disabled button cannot display a tooltip.
+    div.right-button(data-html="Please wait to proceed to the next video.", data-position="top center", style="width: fit-content;")
+      button.circular.ui.icon.button.blue.big.centered.disabled.right(nextVid=script[1].postID, style="margin: 0;")
+        i.chevron.right.icon
+    div.lastVid-button.hidden(data-html="Please wait to continue.", data-position="top center", style="width: fit-content;bottom: 15px; position: absolute;")
+      .ui.large.button.green.fluid.disabled(style="margin:0px;") Continue
+    
+block styles 
+  link(type='text/css', rel='stylesheet', href='/public/css/script.css')
+  if disabledFunctionalities
+    link(type='text/css', rel='stylesheet', href='/public/css/tutorial.css')
+  link(type='text/css', rel='stylesheet', href='/public/css/jquery.highlight-within-textarea.css')
+  
+block scripts
+  script.
+    window.script={}
+    script.firstVideoIndex=!{script[0].postID}
+  script(src='/public/js/script.js')
+  script(src='/public/js/lib/jquery.highlight-within-textarea.js')
+  script(src='/public/js/postFunctionalities.js')
