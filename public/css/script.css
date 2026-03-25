@@ -55,6 +55,7 @@ button.circular.ui.icon.button.blue.centered.hidden {
 
 video {
     width: 100%;
+    height: calc(100% - 120px);
     max-height: calc(100% - 120px);
     background-color: black;
 }
