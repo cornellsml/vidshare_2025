@@ -13,7 +13,9 @@ Change the query parameter of the URL to be directed to the different experiment
 | c_id  | Indicates the experimental condition | None-True, None<br/>Few:None, Few:Few, Few:Many, Many:None, Many:Few, Many:Many<br/><br/> None-True: True Control<br/>None: Control<br/>X:Y: where X indicates the frequency of harassing comments, Y indicates the frequency of addressed harassing comments |
 
 ### **Demo:** 
-Coming soon.
+[VidShare Demo Link](https://vidshare-f16879bf4e3c.herokuapp.com/signup)
 
 ### **Publications:** 
-Coming soon.
+The publications below have used VidShare to conduct social media research.
+
+Zhao, P., Bazarova, N. N., DiFranzo, D., Hui, W., Kizilcec, & Margolin, D. (2024). [Standing up to problematic content on social media: which objection strategies draw the audience’s approval? Journal of Computer-Mediated Communication, 29(1)](https://doi.org/10.1093/jcmc/zmad046). ([GitHub repository](https://github.com/cornellsml/truman_objection/tree/study-1-official-code), [Demo site](https://truman-objections-v1-5d359188df22.herokuapp.com/feed_no?off_id=0&obj_t_id=0&obj_m_id=0))
