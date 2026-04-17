@@ -14,7 +14,7 @@ const userSchema = new mongoose.Schema({
     createdAt: Date, // Absolute Time user was created
     consent: { type: Boolean, default: false }, //Indicates if user has proceeded through welcome signup pages
 
-    mturkID: { type: String, unique: true },
+    mturkID: { type: String, unique: false },
 
     experimentalCondition: String, // Indicates the experimental condition user is assigned to. Values are defined in the .env file by the variable EXP_CONDITIONS_NAMES and assigned at account creation in the users controller.
 
