@@ -83,7 +83,7 @@ exports.postSignup = async(req, res, next) => {
 
     try {
         const existingUser = await User.findOne({ mturkID: req.query.r_id }).exec();
-        if (existingUser) {
+        if (existingUser && req.query.r_id) {
             existingUser.username = req.body.username;
             existingUser.profile.picture = req.body.photo;
             existingUser.profile.name = req.body.username;
